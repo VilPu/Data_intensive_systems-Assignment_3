@@ -1,0 +1,39 @@
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>School ID</th>
+            <th>Name</th>
+            <th>Budget</th>
+        </tr>
+
+        {% for id, school_id, name, budget in faculties %}
+        <tr>
+            <td>{{ id }}</td>
+            <td>{{ school_id }}</td>
+            <td>{{ name }}</td>
+            <td>{{ budget }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+
+<div class="update">
+    <form id="form">
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" placeholder="Enter Faculty ID" required>
+
+        <label for="school_id">School ID</label>
+        <input type="number" id="school_id" name="school_id" placeholder="Enter School ID" required>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Faculty Name" required>
+
+        <label for="budget">Budget</label>
+        <input type="number" id="budget" name="budget" placeholder="Enter Faculty Budget" required>
+        <br>
+        <br>
+        <input type="button" id="submit_faculties" value="Submit" onclick="submit_form('faculty')">
+    </form>
+</div>

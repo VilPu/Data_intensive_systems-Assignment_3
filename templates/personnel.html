@@ -1,0 +1,43 @@
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>School ID</th>
+            <th>Faculty ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+
+        {% for id, school_id, faculty_id, name, salary in personnel %}
+        <tr>
+            <td>{{ id }}</td>
+            <td>{{ school_id }}</td>
+            <td>{{ faculty_id }}</td>
+            <td>{{ name }}</td>
+            <td>{{ salary }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+<div class="update">
+    <form id="form">
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" placeholder="Enter Personnel ID" required>
+
+        <label for="faculty_id">Faculty ID</label>
+        <input type="number" id="faculty_id" name="faculty_id" placeholder="Enter Faculty ID" required>
+
+        <label for="school_id">School ID</label>
+        <input type="number" id="school_id" name="school_id" placeholder="Enter School ID" required>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Personnel Name" required>
+
+        <label for="salary">Salary</label>
+        <input type="number" id="salary" name="salary" placeholder="Enter Personnel Salary" required>
+        <br>
+        <br>
+        <input type="button" id="submit_personnel" value="Submit" onclick="submit_form('personnel')">
+    </form>
+</div>

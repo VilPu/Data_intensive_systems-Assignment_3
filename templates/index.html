@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello data-intensive</title>
+    <style>
+    .container {
+        display: flex;
+        }
+    .container > div {
+        width: 50%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    #form {
+        display: flex;
+        flex-direction: column;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid black;
+        overflow: auto;
+    }
+
+    tr {
+        padding: 4px;
+        border: 1px solid grey;
+    }
+
+    td {
+        padding: 4px;
+    }
+</style>
+
+</head>
+
+<body>
+    
+    <h1>Welcome to the data-intensive App!</h1>
+    <div>
+        <button id="reset">RESET/INIT</button>
+        <form>
+            <input type="radio" name="db" value="1" checked> DB 1
+            <input type="radio" name="db" value="2"> DB 2
+            <input type="radio" name="db" value="3"> DB 3
+        </form>
+    </div>
+    <button id="schools">Schools</button>
+    <button id="faculties">Faculties</button>
+    <button id="personnel">Personnel</button>
+    <button id="courses">Courses</button>
+    <button id="grades">Grades</button>
+
+    <div id="container" class="container">
+    </div>
+</body>
+
+</html>
+<script src="{{ url_for('static', filename='main.js')}}"></script>

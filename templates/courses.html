@@ -1,0 +1,38 @@
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Faculty ID</th>
+            <th>Name</th>
+            <th>Points</th>
+        </tr>
+
+        {% for id, faculty_id, name, points in courses %}
+        <tr>
+            <td>{{ id }}</td>
+            <td>{{ faculty_id }}</td>
+            <td>{{ name }}</td>
+            <td>{{ points }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+<div class="update">
+    <form id="form">
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" placeholder="Enter Course ID" required>
+
+        <label for="faculty_id">Faculty ID</label>
+        <input type="number" id="faculty_id" name="faculty_id" placeholder="Enter Faculty ID" required>
+
+        <label for="name">Course Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Course Name" required>
+
+        <label for="points">Points</label>
+        <input type="number" id="points" name="points" placeholder="Enter Course Points" required>
+        <br>
+        <br>
+        <input type="button" id="submit_courses" value="Submit" onclick="submit_form('course')">
+    </form>
+</div>

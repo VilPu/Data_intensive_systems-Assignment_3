@@ -1,0 +1,38 @@
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Global Rank</th>
+        </tr>
+        {% for id, name, location, global_rank in schools %}
+        <tr>
+            <td>{{ id }}</td>
+            <td>{{ name }}</td>
+            <td>{{ location }}</td>
+            <td>{{ global_rank }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="update">
+    <form id="form">
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" placeholder="Enter School ID" required>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter School Name" required>
+
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="Enter Location" required>
+
+        <label for="global_rank">Global Rank</label>
+        <input type="number" id="global_rank" name="global_rank" value="global_rank" placeholder="Enter Global Rank"
+            required>
+        <br>
+        <br>
+        <input type="button" id="submit_schools" value="Submit" onclick="submit_form('school')">
+    </form>
+</div>

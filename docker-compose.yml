@@ -1,0 +1,27 @@
+services:
+  postgres-1:
+    container_name: postgres-1
+    image: postgres:16
+    restart: no
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5431:5432"
+
+  postgres-2:
+    container_name: postgres-2
+    image: postgres:16
+    restart: no
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  postgres-3:
+    container_name: postgres-3
+    image: postgres:16
+    restart: no
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
