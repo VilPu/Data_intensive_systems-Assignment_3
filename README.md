@@ -32,4 +32,4 @@ After installation steps you should be able to run the application with this com
 <code> flask run  </code>
 
 The application is running on:
-[127.0.0.1:5000](127.0.0.1:5000)
+[127.0.0.1:5000](http://127.0.0.1:5000)
